@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="AP Tong" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>AP Tong</title>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/sub.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/screen.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="../common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../common/js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="../common/js/slick.js"></script>
+<script type="text/javascript" src="../common/js/common.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="freeboard_wrap">
+		<div class="inner">
+			<div class="left_area">
+				<div class="header">
+					<a href="#" class="btn_back" onclick="javascript:history.back();">뒤로가기</a>
+					<!-- 20180226 업데이트 : <span>사우들과 자유롭게 소통하는 공간</span> 추가 -->
+					<h1><a href="../index.html">AP Tong</a><span>사우들과 자유롭게 소통하는 공간</span></h1>
+					<!-- /20180226 업데이트 : <span>사우들과 자유롭게 소통하는 공간</span> 추가 -->
+					<div class="user_info">
+						<p><em>exnickname</em> 님 <a href="#">logout</a></p>
+						<ul class="link">
+							<li><a href="../note/received_note_list.html">쪽지관리</a></li>
+							<li><a href="../mypage/my_list.html">마이페이지</a></li>
+						</ul>
+					</div>
+					<h2 class="scr_out">주메뉴</h2>
+					<ul class="lnb">
+						<li><a href="../index.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>HOME</a></li>
+						<li class="on"><a href="../freeboard_list.html"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>자유 게시판</a></li>
+						<li><a href="../inquiryboard_list.html"><i class="fa fa-comments fa-lg" aria-hidden="true"></i>문의 게시판</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<form name="" id="" action="" method="post">
+				<div id="container" class="ap_board_view">
+					<div class="title">
+						<h1>자유 게시판</h1>
+						<p>사우들과 자유롭게 소통하는 공간</p>
+					</div>
+
+					<div class="detail_conts">
+						<div class="tit_area">
+							<p class="tit">[기타] 연구소에서 시그니처까지 아침에 얼마나 걸리나요?</p>
+							<p class="etc"><span class="send_note" onclick="javascript:notePop();">affE16</span><span>2017.09.25</span></p>
+						</div>
+						<div class="txt_area">
+							<!-- 180315 업데이트 : 수정안내 텍스트 추가 -->
+							<p class="txt_info">“사용자에 의해 수정 되었습니다.”</p>
+							<!-- //180315 업데이트 : 수정안내 텍스트 추가 -->
+							<p>아침 출근시간에 연구소에서 시그니처까지 자차로 얼마나 걸리는지 좀 알려주세요~~<br>출발시간별로 좀 다를거 같은데, 출발시간, 도칙시간좀 알려주세요. ^^<br>친절한 분들 미리 감사합니다. ㅎㅎ<br><br></p>
+							<img src="../common/img/img_welfare.jpg" alt="">
+						</div>
+						<div class="like_area clear">
+							<!-- 20180220 업데이트 : 비공감 버튼 추가 및 각버튼 클래스(.btn_o) 추가 -->
+							<button type="button" class="btn_o btn_like" title="공감"><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i><span class="count">공감</span></button> <!-- // 공감클릭시 숫자로 변경됩니다. -->
+							<!-- // 클릭시 클래스 'on' 추가해야합니다 -->
+							<button type="button" class="btn_o btn_hate" title="비공감"><i class="fa fa-thumbs-down fa-2x" aria-hidden="true"></i><span class="count">비공감</span></button>
+							<!-- //20180220 업데이트 : 비공감 버튼 추가 -->
+						</div>
+
+					</div>
+					<!-- /.detail_conts -->
+
+					<div class="page_ctrl clear">
+
+						<!-- 180315 업데이트 : 이전, 다음 버튼 마크업 변경 -->
+						<button type="button" id="" onclick="" class="btn_m btn_white btn_prev" title="이전"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>이전</button>
+						<button type="button" id="" onclick="javascript:history.back(); return false;" class="btn_m btn_gray btn_list" title="목록"><i class="fa fa-bars" aria-hidden="true"></i>목록</button>
+						<button type="button" id="" onclick="" class="btn_m btn_white btn_next" title="다음"><i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>다음</button>
+						<!-- 180315 업데이트 : 이전, 다음 버튼 마크업 변경 -->
+
+						<div class="ctrl_btn">
+							<!-- 글작성자 게시글에만 나타납니다 -->
+							<a href="freeboard_edit.html" title="수정"><img src="../common/img/ic_edit.png" alt="수정"></a>
+							<button type="button" title="삭제"><img src="../common/img/ic_del.png" alt="삭제"></button>
+
+							<!-- //글작성자 게시글에만 나타납니다 -->
+							
+							<!-- 20180220 업데이트 : 기존에 비공감 버튼이 신고버튼으로 변경 -->
+							<button type="button" class="btn_s btn_white btn_report" title="신고"><i class="fa fa-bell-o" aria-hidden="true"></i>신고</button>
+							<!-- //20180220 업데이트 : 기존에 비공감 버튼이 신고버튼으로 변경 -->
+						</div>
+					</div>
+
+						
+					<!-- 180410 업데이트 : 위치변경 -->
+					<div class="cmt_lst department_a">
+						<div class="cmt_top clear">
+							<p class="cmt_info"><span class="txt_nickname">[답변자]</span><span>2017.09.25 14:15</span></p>
+						</div>
+						
+						<p class="cmt_txt">평일은 1시간 ~ 2시간정도 걸립니다.  관련 부분 확인후 출발해 주세요. </p>
+					</div>
+					<!-- /.department_a -->
+					<!-- //180410 업데이트 : 위치변경 -->
+
+					<div class="cmt_write clear">
+						<div class="cmt_box">
+							<p class="txt_nickname">affE16</p>
+							<textarea id="" class="" data-byte-limit="" rows="3" placeholder="게시판이 훈훈해지는 댓글 부탁드립니다. 다수 비공감 누적시 댓글은 숨김 처리될 수 있습니다."></textarea>
+						</div>
+						<div class="cmt_btm">
+							<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>등록</button>
+						</div>
+					</div>
+					<!-- /.cmt_write -->
+
+					<div class="cmt_view">
+						<h3>전체 댓글수 (<em>10</em>)</h3>
+						<div class="cmt_lst_wrap">
+							<div class="cmt_lst">
+								<!-- 20180202 수정 : 기존 마크업
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname">kingkongboss77</span><span>2017.09.25 14:15</span></p>
+									
+									<div class="btn_area">
+										<button type="button" onclick="javascript:cmtWrite(this); return false;" class="btn_s btn_white btn_reply" title="덧글" title="덧글">덧글</button>
+										<button type="button" class="btn_s btn_white cmt_like" title="공감" title="공감"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></button>
+										<button type="button" class="btn_s btn_white cmt_hate" title="비공감" title="비공감"><i class="fa fa-thumbs-down" aria-hidden="true"></i><span>3</span></button>
+										
+									</div>
+								</div>
+
+								<p class="cmt_txt">그냥 빨간버스 타세요… 5000번, 5005번</p> -->
+								
+								<!-- 20180202 수정 : 변경된 마크업 순서 = 모바일에서 댓글 버튼 레이아웃 이슈로 인한 마크업 위치 변경(.cmt_top안에 있던 <div class="btn_area">~</div> 부분이 댓글내용영역 다음으로 위치 변경 -->
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">kingkongboss77</span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt">그냥 빨간버스 타세요… 5000번, 5005번</p>
+									
+								<div class="btn_area">
+									<!-- 20180220 업데이트 : 덧글버튼 클래스명 변경 btn_gray >> btn_white btn_reply -->
+									<button type="button" onclick="javascript:cmtWrite(this); return false;" class="btn_s btn_white btn_reply" title="덧글" title="덧글">덧글</button>
+									<!-- //20180220 업데이트 : 덧글버튼 클래스명 변경 btn_gray >> btn_white btn_reply -->
+									<button type="button" class="btn_s btn_white cmt_like" title="공감" title="공감"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></button>
+									<button type="button" class="btn_s btn_white cmt_hate" title="비공감" title="비공감"><i class="fa fa-thumbs-down" aria-hidden="true"></i><span>3</span></button>
+									<button type="button" class="btn_s btn_white btn_report" title="신고"><i class="fa fa-bell-o" aria-hidden="true"></i>신고</button>
+								</div>
+								
+								<!-- //20180202 수정 : 변경된 마크업 순서 = 모바일에서 댓글 버튼 레이아웃 이슈로 인한 마크업 위치 변경(.cmt_top안에 있던 <div class="btn_area">~</div> 부분이 댓글내용영역 다음으로 위치 변경 -->
+								
+								<div class="cmt_write clear">
+									<div class="cmt_box">
+										<p class="txt_nickname">affE16</p>
+										<textarea id="" class="" data-byte-limit="" rows="3" placeholder="게시판이 훈훈해지는 댓글 부탁드립니다. 다수 비공감 누적시 댓글은 숨김 처리될 수 있습니다."></textarea>
+									</div>
+									<div class="cmt_btm">
+										<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>등록</button>
+									</div>
+								</div>
+								<!-- /.cmt_write -->
+							</div>
+							<!-- /.cmt_lst -->
+
+							<!-- 댓글의 덧글 : 클래스 recmt_lst 추가됨 -->
+							<div class="cmt_lst recmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">affE16 <em class="c_writer">(글쓴이)</em></span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt"><span class="txt_edit">[사용자에 의해 수정되었습니다.]</span>빨간버스 편한거는 알아요. 근데 차를 써야 해서요.ㅠㅠ</p>
+									
+								<div class="btn_area">
+									<button type="button" onclick="javascript:cmtEdit(this);" class="btn_s btn_white" title="수정">수정</button>
+									<button type="button" class="btn_s btn_white" title="삭제">삭제</button>
+									<!-- // 본인 댓글에만 나타나는 버튼 -->
+
+									<button type="button" class="btn_s btn_white cmt_like" title="공감" title="공감"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>2</span></button>
+									<button type="button" class="btn_s btn_white cmt_hate" title="비공감"><i class="fa fa-thumbs-down" aria-hidden="true"></i><span>0</span></button>
+									<button type="button" class="btn_s btn_white btn_report" title="신고"><i class="fa fa-bell-o" aria-hidden="true"></i>신고</button>
+								</div>
+								
+								<!-- 20180208 추가 : 댓글 수정 폼 추가 -->
+								<div class="cmt_edit clear">
+									<div class="cmt_box">
+										<p class="txt_nickname">affE16</p>
+										<textarea id="" class="" data-byte-limit="" rows="3" placeholder="">시그니처로 올라가는거라서요. 9시 이전에 도착하려다 보니 ㅜㅜ </textarea>
+									</div>
+									<div class="cmt_btm">
+										<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>수정</button>
+									</div>
+								</div>
+								<!-- //20180208 추가 : 댓글 수정 폼 추가 -->
+								<!-- /.cmt_edit -->
+							</div>
+							<!-- //댓글의 덧글 : 클래스 recmt_lst 추가됨 -->
+
+							<div class="cmt_lst recmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">nickey</span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt">오옷 감사합니다. 서둘러야 겠네요.</p>
+									
+								<div class="btn_area">
+									<button type="button" class="btn_s btn_white cmt_like" title="공감"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>16</span></button>
+									<button type="button" class="btn_s btn_white cmt_hate" title="비공감"><i class="fa fa-thumbs-down" aria-hidden="true"></i><span>0</span></button>
+									<button type="button" class="btn_s btn_white btn_report" title="신고"><i class="fa fa-bell-o" aria-hidden="true"></i>신고</button>
+								</div>
+							</div>
+
+							<div class="cmt_lst recmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">affE16 <em class="c_writer">(글쓴이)</em></span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt"><span class="txt_del">[사용자에 의해 삭제되었습니다.]</span></p>
+							</div>
+
+							<div class="cmt_lst recmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">shearmadness</span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt">1시간반정도 잡으세요. 버스 전용차선을 못타니 이정도는 걸립니다.</p>
+									
+								<div class="btn_area">
+									<button type="button" class="btn_s btn_white cmt_like" title="공감"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>3</span></button>
+									<button type="button" class="btn_s btn_white cmt_hate" title="비공감"><i class="fa fa-thumbs-down" aria-hidden="true"></i><span>0</span></button>
+									<button type="button" class="btn_s btn_white btn_report" title="신고"><i class="fa fa-bell-o" aria-hidden="true"></i>신고</button>
+								</div>
+							</div>
+
+							<div class="cmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">affE16 <em class="c_writer">(글쓴이)</em></span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt">시그니처로 올라가는거라서요. 9시 이전에 도착하려다 보니 ㅜㅜ </p>
+									
+								<div class="btn_area">
+									<button type="button" onclick="javascript:cmtEdit(this);" class="btn_s btn_white" title="수정">수정</button>
+									<button type="button" class="btn_s btn_white" title="삭제">삭제</button>
+									<!-- // 본인 댓글에만 나타나는 버튼 -->
+
+									<!-- 20180220 업데이트 : 덧글버튼 클래스명 변경 btn_gray >> btn_white btn_reply -->
+									<button type="button" onclick="javascript:cmtWrite(this); return false;" class="btn_s btn_white btn_reply" title="덧글" title="덧글">덧글</button>
+									<!-- //20180220 업데이트 : 덧글버튼 클래스명 변경 btn_gray >> btn_white btn_reply -->
+									<button type="button" class="btn_s btn_white cmt_like" title="공감"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>2</span></button>
+									<button type="button" class="btn_s btn_white cmt_hate" title="비공감"><i class="fa fa-thumbs-down" aria-hidden="true"></i><span>0</span></button>
+									<button type="button" class="btn_s btn_white btn_report" title="신고"><i class="fa fa-bell-o" aria-hidden="true"></i>신고</button>
+								</div>
+								
+								<div class="cmt_write clear">
+									<div class="cmt_box">
+										<p class="txt_nickname">affE16</p>
+										<textarea id="" class="" data-byte-limit="" rows="3" placeholder="게시판이 훈훈해지는 댓글 부탁드립니다. 다수 비공감 누적시 댓글은 숨김 처리될 수 있습니다."></textarea>
+									</div>
+									<div class="cmt_btm">
+										<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>등록</button>
+									</div>
+								</div>
+								<!-- /.cmt_write -->
+								
+								<!-- 20180208 추가 : 댓글 수정 폼 추가 -->
+								<div class="cmt_edit clear">
+									<div class="cmt_box">
+										<p class="txt_nickname">affE16</p>
+										<textarea id="" class="" data-byte-limit="" rows="3" placeholder="">시그니처로 올라가는거라서요. 9시 이전에 도착하려다 보니 ㅜㅜ </textarea>
+									</div>
+									<div class="cmt_btm">
+										<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>수정</button>
+									</div>
+								</div>
+								<!-- //20180208 추가 : 댓글 수정 폼 추가 -->
+								<!-- /.cmt_edit -->
+							</div>
+
+							<div class="cmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">affE16 <em class="c_writer">(글쓴이)</em></span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt"><span class="txt_del">[작성규칙을 위배하여 관리자에 의해 삭제되었습니다.]</span></p>
+								
+								<div class="cmt_write clear">
+									<div class="cmt_box">
+										<p class="txt_nickname">affE16</p>
+										<textarea id="" class="" data-byte-limit="" rows="3" placeholder="게시판이 훈훈해지는 댓글 부탁드립니다. 다수 비공감 누적시 댓글은 숨김 처리될 수 있습니다."></textarea>
+									</div>
+									<div class="cmt_btm">
+										<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>등록</button>
+									</div>
+								</div>
+								<!-- /.cmt_write -->
+							</div>
+
+							<div class="cmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">johojin</span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt"><span class="txt_del">[다수 비공감 누적으로 숨김 처리되었습니다.]</span></p>
+								
+								<div class="cmt_write clear">
+									<div class="cmt_box">
+										<p class="txt_nickname">affE16</p>
+										<textarea id="" class="" data-byte-limit="" rows="3" placeholder="게시판이 훈훈해지는 댓글 부탁드립니다. 다수 비공감 누적시 댓글은 숨김 처리될 수 있습니다."></textarea>
+									</div>
+									<div class="cmt_btm">
+										<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>등록</button>
+									</div>
+								</div>
+								<!-- /.cmt_write -->
+							</div>
+
+							<div class="cmt_lst">
+								<div class="cmt_top clear">
+									<p class="cmt_info"><span class="txt_nickname send_note" onclick="javascript:notePop();">zinzozi</span><span>2017.09.25 14:15</span></p>
+								</div>
+
+								<p class="cmt_txt"><span class="txt_del">[다수 사용자 요청에 의해 관리자가 숨김 처리하였습니다.]</span></p>
+								
+								<div class="cmt_write clear">
+									<div class="cmt_box">
+										<p class="txt_nickname">affE16</p>
+										<textarea id="" class="" data-byte-limit="" rows="3" placeholder="게시판이 훈훈해지는 댓글 부탁드립니다. 다수 비공감 누적시 댓글은 숨김 처리될 수 있습니다."></textarea>
+									</div>
+									<div class="cmt_btm">
+										<button type="submit" id="" onclick=""><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>등록</button>
+									</div>
+								</div>
+								<!-- /.cmt_write -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /#container -->
+			</form>
+		</div>
+
+		<div class="m_footer only_mob">
+			<h2 class="scr_out">모바일 사이트 정보</h2>
+			<ul class="link">
+				<li><a href="../info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="../info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+			
+			<!-- 20180202 수정 : 하단 고정퀵메뉴 변경 -->
+			<ul class="m_quick_nav">
+				<li><a href="../info/guide.html"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>FAQ</a></li>
+				<li><a href="../member/member_edit.html"><i class="fa fa-user-circle-o fa-2x"></i>마이페이지</a></li>
+				<li><a href="#"><i class="fa fa-envelope-o fa-2x"></i>쪽지</a></li>
+			</ul>
+			<!-- //20180202 수정 : 하단 고정퀵메뉴 변경 -->
+		</div>
+		
+		<!-- 20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+		<div id="footer" class="only_pc">
+			<ul class="f_link">
+				<li><a href="../info/guide.html">이용안내</a></li>
+				<li><a href="../info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="../info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+		</div>
+		<!-- /#footer -->
+		<!-- /20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+		
+	</div>
+	<!-- /#wrapper -->
+	
+	<div class="layer_pop note_pop">
+        <div class="pop_bg"></div>
+        <div class="layer pop_layout">
+            <div class="pop_inner">
+                <div class="tit_box">
+                    <h3 class="tit">쪽지 보내기</h3>
+                    <p class="pop_close">닫기</p>
+                </div>
+                <div class="cont_box pop_tbl">
+					<table>
+						<colgroup>
+							<col style="width:30%">
+							<col style="width:70%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>수신자</th>
+								<td>관리자</td>
+							</tr>
+							<tr>
+								<th>발신자</th>
+								<td>*****(현재 로그인 사용자)</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td><input type="text" class="inputform" placeholder="제목을 입력해 주세요."></td>
+							</tr>
+							<tr>
+								<td colspan="2"><textarea name="" id="" cols="" rows="6" placeholder="내용을 입력해 주세요."></textarea></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn_wrap">
+						<button type="submit" class="btn_sm btn_gray">보내기</button>
+					</div>
+                </div>
+            </div>
+            <!-- /.pop_inner -->  
+        </div>
+        <!-- /.layer --> 
+    </div>
+    <!-- /.layer_popup -->
+
+	<script>
+		// 공감 선택시 클래스 추가
+		$(document).ready(function(){
+			$(".btn_like").click(function() {
+				$(this).toggleClass( "on" );
+				$(".btn_hate").removeClass("on");
+			});
+			$(".btn_hate").click(function() {
+				$(this).toggleClass( "on" );
+				$(".btn_like").removeClass("on");
+			});
+			$(".cmt_like").click(function() {
+				$(this).toggleClass( "on" );
+				$(this).next().removeClass("on");
+			});
+			$(".cmt_hate").click(function() {
+				$(this).toggleClass( "on" );
+				$(this).prev().removeClass("on");
+			});
+
+			// 20180226 업데이트 : 스크립트 추가
+			$(".btn_report").click(function() {
+				$(this).addClass( "on" );
+			});
+		});
+
+
+
+		// 20180208 : 스크립트 수정
+		function cmtWrite(t){
+			$(t).parents('.btn_area').siblings('.cmt_edit').hide();
+			$(t).parents('.btn_area').siblings('.cmt_write').toggle();
+		}
+		
+		function cmtEdit(t){
+			$(t).parents('.btn_area').siblings('.cmt_write').hide();
+			$(t).parents('.btn_area').siblings('.cmt_edit').toggle();
+		}
+
+		// 쪽지 보내기 팝업
+		function notePop(){
+			$('.note_pop').fadeIn(200);
+			$(".pop_bg").show();
+			$("html").css("overflow","hidden");
+			
+			$('.pop_close, .pop_bg').click(function(){
+				$('.note_pop').hide();
+				$(".pop_bg").hide();
+				$("html").css("overflow","auto");
+			});
+
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var layerWidth = $('.layer').width();
+			var layerHeight = $('.layer').height();
+			
+			var popH = $('.pop_layout').height();
+			
+			if( popH > winHeight ) { //화면 세로사이즈가 레이어팝업 세로사이즈보다 클때
+				$('.layer_pop').addClass('s_pc');
+			}else{ //그 외의 경우
+				$('.layer_pop').removeClass('s_pc');
+			}	
+		}
+	</script>
+</body>
+</html>

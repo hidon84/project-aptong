@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="AP Tong" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>AP Tong</title>
+<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="common/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="common/css/main.css" />
+<link rel="stylesheet" type="text/css" href="common/css/sub.css" />
+<link rel="stylesheet" type="text/css" href="common/css/screen.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="common/js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="common/js/slick.js"></script>
+<script type="text/javascript" src="common/js/animates.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="freeboard_wrap">
+		<div class="inner">
+			<div class="left_area">
+				<div class="header">
+					<a href="#" class="btn_back" onclick="javascript:history.back();">뒤로가기</a>
+					<!-- 20180226 업데이트 : <span>사우들과 자유롭게 소통하는 공간</span> 추가 -->
+					<h1><a href="index.html">AP Tong</a><span>사우들과 자유롭게 소통하는 공간</span></h1>
+					<!-- /20180226 업데이트 : <span>사우들과 자유롭게 소통하는 공간</span> 추가 -->
+					<div class="user_info">
+						<p><em>exnickname</em> 님 <a href="#">logout</a></p>
+						<ul class="link">
+							<li><a href="member/member_edit.html">회원정보수정</a></li>
+							<li><a href="note/received_note_list.html">쪽지관리</a></li>
+							<li><a href="mypage/my_list.html">마이페이지</a></li>
+						</ul>
+					</div>
+					<!-- <h2 class="scr_out">주메뉴</h2>
+					<ul class="lnb">
+						<li><a href="index.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>HOME</a></li>
+						<li class="on"><a href="freeboard_list.html"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>자유 게시판</a></li>
+						<li><a href="inquiryboard_list.html"><i class="fa fa-comments fa-lg" aria-hidden="true"></i>문의 게시판</a></li>
+					</ul> -->
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+			<a href="#" name="list-anchor"></a>
+			<form name="" id="" action="" method="post">
+				<div id="container" class="ap_board_lst">
+
+					<!-- <div class="title">
+						<h1>자유 게시판</h1>
+						<p>사우들과 자유롭게 소통하는 공간</p>
+					</div> -->
+					<div class="select_wrap" id="">
+						<input type="text" class="select" placeholder="카테고리" readonly="">
+						<div class="option">
+							<ul>
+								<li>선택 안함</li>
+								<li>회사 생활 / 커리어</li>
+								<li>여가 / 연애</li>
+								<li>결혼 / 육아</li>
+								<li>시사 / 재테크</li>
+								<li>기타</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="btn_wrap clear">
+						<div class="btn_inner fl_r btn_m_2n">
+							<input type="search" class="inputform srchform" placeholder="검색어를 입력해주세요">
+							<!-- <a href="mypage/my_list.html" class="btn_m btn_gray ls0" title="내 작성글 보기"><i class="fa fa-filter" aria-hidden="true"></i>내 작성글 보기</a> -->
+							<a href="board/freeboard_write.html" class="btn_m btn_color only_pc" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i>글쓰기</a>
+						</div>
+					</div>
+					
+					<!-- 180315 업데이트 : 모바일용 버튼 추가 -->
+					<!-- <div class="only_mob">
+						<a href="mypage/my_list.html" class="btn_m btn_gray ls0" title="내 작성글 보기"><i class="fa fa-filter" aria-hidden="true"></i>내 작성글 보기</a>
+					</div> -->
+					<!-- //180315 업데이트 : 모바일용 버튼 추가 -->
+
+					<div class="board_conts">
+						<!-- 20180131 수정 : 리스트 항목 전체 댓글수 위치변경으로 인해 <span class="num_cmt">~</span> 태그가 <dt>태그에서 <dd class="txt2"> 로 이동 -->
+
+						<!-- 공지 리스트는 클래스 'noti' 들어가야합니다. -->
+						<dl class="board_lst noti">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html">자유 게시판 관련 공지사항입니다.</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">manager</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>9,876</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>156</em></span>
+								<!-- 20180220 업데이트 : <span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>N</em></span> 비공감 아이콘 추가. 리스트 모두적용 -->
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>4</em></span>
+								<!-- //20180220 업데이트 : <span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>N</em></span> 비공감 아이콘 추가. 리스트 모두적용 -->
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>727</span>
+							</dd>
+						</dl>
+						<!-- //공지 리스트는 클래스 'noti' 들어가야합니다. -->
+
+						<!-- HOT 리스트는 클래스 'hot' 들어가야합니다. -->
+						<dl class="board_lst hot">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[회사생활]</em>퇴직금 시뮬레이션 돌려보는데 이게 맞는지 에고..</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">grovesoft</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>678</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>68</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>2</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>83</span>
+							</dd>
+						</dl>
+						<!-- // HOT 리스트는 클래스 'hot' 들어가야합니다. -->
+
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[회사생활]</em>1층 사원증 인증하는 게이트에서 인사하는거</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">angel1004</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>202</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>16</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>1</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>7</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[맛집]</em>쭈꾸미볶음에 쭈꾸미 한마리! 어떻게 생각해요?</a>
+								<span class="status complete">답변</span> <!-- 180410 추가 : 답변 상태값(대기/완료) 추가 -->
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">shearmadness</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>30</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>3</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>0</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>3</span>
+							</dd>
+						</dl>
+						<!-- 블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst blind">
+							<dt><a class="ellipsis" href="#" onclick="javascript:; return false;">“다수 비공감 누적으로 숨김 처리되었습니다.”</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">ghost</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>321</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>23</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>5</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<!-- //블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst">
+							<dt><a class="ellipsis" href="board/freeboard_detail.html"><em>[회사생활]</em>전화기 좀 어떻게 합시다 아 진짜 일을 못하겠네..</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">telephone1990</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>65</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>10</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>2</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[맛집]</em>쭈꾸미볶음에 쭈꾸미 한마리! 어떻게 생각해요?</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">angel1004</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>202</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>16</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>1</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>7</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt><a class="ellipsis" href="board/freeboard_detail.html"><em>[취미]</em>AP LIFE 이렇게 바뀐다</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">aplife</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>34</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>2</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>0</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[맛집]</em>쭈꾸미볶음에 쭈꾸미 한마리! 어떻게 생각해요?</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">shearmadness</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>30</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>3</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>0</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>3</span>
+							</dd>
+						</dl>
+						<!-- 블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst blind">
+							<dt><a class="ellipsis" href="#" onclick="javascript:; return false;">“다수 사용자 요청에 의해 관리자가 숨김 처리하였습니다.”</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">ghost</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>321</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>23</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>5</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<!-- //블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst">
+							<dt><a class="ellipsis" href="board/freeboard_detail.html"><em>[회사생활]</em>전화기 좀 어떻게 합시다 아 진짜 일을 못하겠네..</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">telephone1990</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>65</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>10</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>2</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[맛집]</em>쭈꾸미볶음에 쭈꾸미 한마리! 어떻게 생각해요?</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">angel1004</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>202</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>16</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>1</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>7</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt><a class="ellipsis" href="board/freeboard_detail.html"><em>[취미]</em>AP LIFE 이렇게 바뀐다</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">aplife</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>34</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>2</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>0</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[맛집]</em>쭈꾸미볶음에 쭈꾸미 한마리! 어떻게 생각해요?</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">shearmadness</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>30</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>3</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>0</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>3</span>
+							</dd>
+						</dl>
+						<!-- 블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst blind">
+							<dt><a class="ellipsis" href="#" onclick="javascript:; return false;">“다수 비공감 누적으로 숨김 처리되었습니다”</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">ghost</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>321</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>23</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>5</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<!-- //블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst">
+							<dt><a class="ellipsis" href="board/freeboard_detail.html"><em>[회사생활]</em>전화기 좀 어떻게 합시다 아 진짜 일을 못하겠네..</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">telephone1990</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>65</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>10</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>2</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[맛집]</em>쭈꾸미볶음에 쭈꾸미 한마리! 어떻게 생각해요?</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">angel1004</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>202</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>16</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>1</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>7</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt><a class="ellipsis" href="board/freeboard_detail.html"><em>[취미]</em>AP LIFE 이렇게 바뀐다</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">aplife</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>34</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>2</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>0</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<dl class="board_lst">
+							<dt>
+								<a class="ellipsis" href="board/freeboard_detail.html"><em>[맛집]</em>쭈꾸미볶음에 쭈꾸미 한마리! 어떻게 생각해요?</a>
+							</dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">shearmadness</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>30</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>3</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>0</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>3</span>
+							</dd>
+						</dl>
+						<!-- 블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst blind">
+							<dt><a class="ellipsis" href="#" onclick="javascript:; return false;">“다수 비공감 누적으로 숨김 처리되었습니다”</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">ghost</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>321</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>23</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>5</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+						<!-- //블라인드 처리된 게시물은 클래스 'blind' 들어가야합니다. -->
+						<dl class="board_lst">
+							<dt><a class="ellipsis" href="board/freeboard_detail.html"><em>[회사생활]</em>전화기 좀 어떻게 합시다 아 진짜 일을 못하겠네..</a></dt>
+							<dd class="txt1">
+								<span><em class="send_note" onclick="javascript:notePop();">telephone1990</em></span>
+								<span><em>2018.01.01</em></span>
+							</dd>
+							<dd class="txt2">
+								<span><i class="fa fa-eye" aria-hidden="true"></i><em>65</em></span>
+								<span><i class="fa fa-thumbs-up" aria-hidden="true"></i><em>10</em></span>
+								<span><i class="fa fa-thumbs-down" aria-hidden="true"></i><em>2</em></span>
+								<span class="num_cmt"><i class="fa fa-commenting" aria-hidden="true"></i>0</span>
+							</dd>
+						</dl>
+
+						<!-- 등록된 게시물이 없을 때 -->
+						<div class="no_data">등록된 정보가 없습니다.</div>
+						<!-- //등록된 게시물이 없을 때 -->
+
+					</div>
+					<!-- /.board_conts -->
+
+					<div class="btn_wrap clear only_pc">
+						<!-- 180315 업데이트 : 버튼 추가 및 마크업 변경 -->
+						<div class="btn_inner fl_r btn_m_2n">
+							<a href="mypage/my_list.html" class="btn_m btn_gray ls0" title="내 작성글 보기"><i class="fa fa-filter" aria-hidden="true"></i>내 작성글 보기</a>
+							<a href="board/freeboard_write.html" class="btn_m btn_color" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i>글쓰기</a>
+						</div>
+						<!-- //180315 업데이트 : 버튼 추가 및 마크업 변경 -->
+					</div>
+
+					<!-- 모바일용 글쓰기 버튼 -->
+					<a href="board/freeboard_write.html" class="btn_write"><img src="common/img/ic_write.png" alt="글쓰기"></a>
+					<!-- //모바일용 글쓰기 버튼 -->
+
+					<div class="paging_wrap only_pc">
+						<div class="prev_wrap">
+							<a class="first" href="#" title="첫페이지">첫페이지</a>
+							<a class="prev" href="#" title="이전페이지">이전페이지</a>
+						</div>
+						<ul class="page">
+							<li class="on"><a href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">5</a></li>
+						</ul>
+						<div class="next_wrap">
+							<a class="next" href="#" title="다음페이지">다음페이지</a>
+							<a class="last" href="#" title="끝페이지">끝페이지</a>
+						</div>
+					</div>
+					<!-- PC용 페이징 -->
+
+					<div class="paging_wrap only_mob">
+						<div class="prev_wrap">
+							<a class="prev" href="#">이전페이지</a>
+						</div>
+						<ul class="page">
+							<li class="on"><a href="#">1</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+						<div class="next_wrap">
+							<a class="next" href="#">다음페이지</a>
+						</div>
+					</div>
+					<!-- 모바일용 페이징 -->
+				</div>
+				<!-- /#container -->
+			</form>
+		</div>
+
+		<div class="m_footer only_mob">
+			<h2 class="scr_out">모바일 사이트 정보</h2>
+			<ul class="link">
+				<li><a href="info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+			
+			<!-- 20180202 수정 : 하단 고정퀵메뉴 변경 -->
+			<ul class="m_quick_nav">
+				<li><a href="info/guide.html"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>이용안내</a></li>
+				<li><a href="member/member_edit.html"><i class="fa fa-user-circle-o fa-2x"></i>회원정보수정</a></li>
+				<li><a href="#"><i class="fa fa-envelope-o fa-2x"></i>쪽지</a></li>
+			</ul>
+			<!-- //20180202 수정 : 하단 고정퀵메뉴 변경 -->
+		</div>
+		
+		<!-- 20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+		<div id="footer" class="only_pc">
+			<ul class="f_link">
+				<li><a href="info/guide.html">이용안내</a></li>
+				<li><a href="info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+		</div>
+		<!-- /#footer -->
+		<!-- /20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+	</div>
+	<!-- /#wrapper -->
+	
+	<div class="layer_pop note_pop">
+        <div class="pop_bg"></div>
+        <div class="layer pop_layout">
+            <div class="pop_inner">
+                <div class="tit_box">
+                    <h3 class="tit">쪽지 보내기</h3>
+                    <p class="pop_close">닫기</p>
+                </div>
+                <div class="cont_box pop_tbl">
+					<table>
+						<colgroup>
+							<col style="width:30%">
+							<col style="width:70%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>수신자</th>
+								<td>관리자</td>
+							</tr>
+							<tr>
+								<th>발신자</th>
+								<td>*****(현재 로그인 사용자)</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td><input type="text" class="inputform" placeholder="제목을 입력해 주세요."></td>
+							</tr>
+							<tr>
+								<td colspan="2"><textarea name="" id="" cols="" rows="6" placeholder="내용을 입력해 주세요."></textarea></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn_wrap">
+						<button type="submit" class="btn_sm btn_gray">보내기</button>
+					</div>
+                </div>
+            </div>
+            <!-- /.pop_inner -->  
+        </div>
+        <!-- /.layer --> 
+    </div>
+    <!-- /.layer_popup -->
+
+	<script>
+		// 쪽지 보내기 팝업
+		function notePop(){
+			$('.note_pop').fadeIn(200);
+			$(".pop_bg").show();
+			$("html").css("overflow","hidden");
+			
+			$('.pop_close, .pop_bg').click(function(){
+				$('.note_pop').hide();
+				$(".pop_bg").hide();
+				$("html").css("overflow","auto");
+			});
+
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var layerWidth = $('.layer').width();
+			var layerHeight = $('.layer').height();
+			
+			var popH = $('.pop_layout').height();
+			
+			if( popH > winHeight ) { //화면 세로사이즈가 레이어팝업 세로사이즈보다 클때
+				$('.layer_pop').addClass('s_pc');
+			}else{ //그 외의 경우
+				$('.layer_pop').removeClass('s_pc');
+			}	
+		}
+	</script>
+
+	
+	<!-- 180314 업데이트 : 메인 팝업 추가 -->
+	<!-- <div class="layer_pop main_pop" style="display: block;">
+	        <div class="pop_bg"></div>
+	        <div class="layer pop_layout">
+	            <div class="pop_inner">
+	                <div class="cont_box">
+					<div class="img_area"><img src="common/img/img_noimage.jpg" alt=""></div>
+					<div class="txt_area">
+						<p>팝업 내용이 들어갑니다.<br>
+						팝업 내용이 들어갑니다.<br>
+						팝업 내용이 들어갑니다.<br></p>
+					</div>
+	                </div>
+				<div class="btm">
+					<div class="custom_ckbox">
+						<input type="checkbox" id="popChk" name="popChk" value="main_pop" >
+						<label for="popChk">다시보지않기</label>
+					</div>
+					<a href="#" class="pop_close">닫기</a>
+				</div>
+	            </div>
+	        </div>
+	    </div> -->
+    <!-- /.layer_popup.main_pop -->
+
+	<script>
+	$(document).ready(function (){
+		$('html,body').animate({scrollTop: $("a[name='list-anchor']").offset().top - 70}, 'slow');
+
+		/* 메인팝업 */
+		var $popup=$(".main_pop");
+		$popup.find(".pop_close").on("click",function  () {
+			console.log($(this));
+			var chk=$(this).parent().find("input[type='checkbox']").is(":checked");
+			console.log(chk);	//true : 오늘 하루 팝업창 열지 않기를 선택한 경우
+
+			if (chk) setCookie($(this).parent().find("input[type='checkbox']").val(),"done",1);
+			console.log($(this).parent().find("input[type='checkbox']").val());
+
+			$(this).parents(".main_pop").hide();
+			
+			return false;
+		});
+		
+		//쿠키에 저장할 데이터 이름, 데이터 값, 만료일
+		function setCookie(name, value, exdays) {
+			var today=new Date();
+			var exday=today.getDate()+exdays;
+			today.setDate(exday);	//만료일을 today 날짜 객체에 강제 대입
+				console.log(today);
+			//쿠키에 데이터 저장하기
+			//document.cookie="이름1=값1; 이름2=값2"; : 쿠키를 입력
+			//toGMTString() GMT 표준 표기 방식으로 문자형 데이터로 반환
+			document.cookie=name+"="+value+"; Expires="+today.toGMTString();
+		}
+		//쿠키에 저장된 값 확인
+		var cookieData=document.cookie;
+		if (cookieData.indexOf("main_pop1=done") > -1) $(".main_pop1").hide();//체크한 다음 닫을 경우
+		if (cookieData.indexOf("main_pop2=done") > -1) $(".main_pop2").hide();//체크한 다음 닫을 경우
+		$popup.show();
+
+	});
+	</script>
+	<!-- //180314 업데이트 : 메인 팝업 추가 -->
+
+	<script src="common/js/pulltorefresh.js"></script>
+    <script>
+      /* global PullToRefresh */
+      PullToRefresh.init({
+        mainElement: '#container',
+        onRefresh: function() {}
+      });
+    </script>
+
+</body>
+</html>

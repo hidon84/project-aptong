@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="AP Tong" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+
+<title>AP Tong</title>
+<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="common/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="common/css/main.css" />
+<link rel="stylesheet" type="text/css" href="common/css/sub.css" />
+<link rel="stylesheet" type="text/css" href="common/css/screen.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="common/js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="common/js/slick.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="form_st"> <!-- 180123 수정 : form_st 클래스 추가 -->
+		<div class="login_wrap">
+			<div class="logo_txt">
+				<h1><img src="common/img/logo.png" alt="AP통"></h1>
+				<p>아모레퍼시픽그룹 임직원의 ‘열린 소통‘ 공간입니다.<br>로그인 하시면 더 많은 서비스를 편리하게 이용하실 수 있습니다.<br>(활동하실때에는 닉네임으로  진행됩니다.)</p>
+			</div>
+			<fieldset>
+				<legend class="scr_out">회원가입 완료</legend>
+				<form class="loginform" id="" action="" name="" method="POST">
+					<div class="input_wrap">
+						<div class="txt_area">
+							<p>(닉네임) 님<br>
+							회원가입이 완료되었습니다.</p>
+							<p>철저한 익명 보장을 위해 아이디와 비밀번호는 별도 저장하지 않으므로, 분실시 재가입해야 합니다. <br>이점 미리 양해 부탁드립니다.</p>
+							<p>설정하신 닉네임은 회원정보 수정에서 변경 가능합니다.</p>
+						</div>
+						<div class="btn_wrap">
+							<a href="login.html" class="btn btn_main">로그인</a>
+						</div>
+					</div>
+					<!-- /.input_wrap -->
+				</form>
+			</fieldset>
+		</div>
+		
+		<!-- <div id="footer">
+			<p>© Since 1945 Amorepacific, All Rights Reserved.</p>
+			<h1><img src="common/img/f_logo.png" alt="로고"></h1>
+		</div> -->
+		<!-- /#footer -->
+	</div>
+	<!-- /#wrapper -->
+
+	<script>
+	$(document).ready(function(){
+		var contH = $(".login_wrap").height();
+		$(".login_wrap").css({"marginTop":-contH/2});
+	});
+	</script>
+</body>
+</html>

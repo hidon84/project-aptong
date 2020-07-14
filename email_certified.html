@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="AP Tong" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+
+<title>AP Tong</title>
+<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="common/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="common/css/main.css" />
+<link rel="stylesheet" type="text/css" href="common/css/sub.css" />
+<link rel="stylesheet" type="text/css" href="common/css/screen.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="common/js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="common/js/slick.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="form_st"> <!-- 180123 수정 : form_st 클래스 추가 -->
+		<div class="login_wrap">
+			<div class="logo_txt">
+				<h1><img src="common/img/logo.png" alt="AP통"></h1>
+				<p>아모레퍼시픽그룹 임직원의 ‘열린 소통‘ 공간입니다.<br>AP 직원분들은 이메일 및 인증후 사용가능합니다.</p>
+			</div>
+			<fieldset>
+				<legend class="scr_out">이메일 인증</legend>
+				<form class="loginform" id="" action="" name="" method="POST">
+					<div class="input_wrap">
+						<div class="inp_group">
+							<div class="inp">
+								<!-- 180328 업데이트 -->
+								<label for="" class="scr_out">이메일</label>
+								<div class="email_form">
+									<input type="text" class="inputform" title="E-mail">
+									<span class="hyphen">@</span>
+									<input type="text" class="inputform emailDomain" title="E-mail 도메인" value="amorepacific.com" disabled>
+									<select class="select email_select" title="E-mail 도메인 리스트">
+										<option value="amorepacific.com">AP</option>
+										<option value="amorepacific.com">APG</option>
+										<option value="pacificglas.com">퍼시픽글라스</option>
+										<option value="pacificpackage.co.kr">퍼시픽패키지</option>
+										<option value="aestura.com">에스트라</option>
+										<option value="amoshair.co.kr">아모스프로페셔널</option>
+										<option value="innisfree.com">이니스프리</option>
+										<option value="espoir.com">에스쁘아</option>
+										<option value="etude.co.kr">에뛰드</option>
+										<option value="cosvision.com">코스비전</option>
+										<option value="osullocfarm.com">오설록농장</option>
+										<option value="1">직접입력</option>
+									</select>     
+								</div>
+								<!-- //180328 업데이트 -->
+								<p class="warning_label"><label for="">사내 이메일 주소를 입력해주세요.</label></p>
+							</div>
+							<div class="certified_area">
+								<button type="submit" id="" onclick="javascript:certified($(this)); return false;" class="btn btn_main_g">인증번호 발송</button>
+								<div class="inp">
+									<label for="" class="scr_out">인증번호</label>
+									<input type="text" id="" name="" placeholder="인증번호" class="inputform">
+									<p class="warning_label"><label for="">인증번호를 정확히 입력해주세요.</label></p>
+									<button type="submit" id="" onclick="" class="btn btn_main">확인</button>
+								</div>
+							</div>
+						</div>
+						<div class="btn_wrap">
+							<button type="submit" id="certifyBtn" class="btn btn_main btn_certify">인증하기</button> <!-- 20180202 추가 : 아이디값 certifyBtn, 클래스값 btn_certify 추가 -->
+						</div>
+						<ul class="input_btm cmt_lst">
+							<li>1) ‘사내 이메일’로 재직 인증 후 회원가입이 진행됩니다.</li>
+							<li>2) ‘인증번호’는 AP-ON에 등록된 핸드폰 번호로 발송됩니다.</li>
+							<li>3) 회원가입과 함께 활동을 위한 ‘닉네임’ 설정이 가능합니다.</li>
+							<li>※ 단, 인증 이후 다른 기기에서 로그인 할 경우 재인증 해야함</li>
+							<li>※ 주재원은 AP-ON에 "82(국가코드)"로 등록된 핸드폰 번호로 문자수신 가능</li>
+						</ul>
+					</div>
+					<!-- /.input_wrap -->
+				</form>
+			</fieldset>
+		</div>
+		
+		<!-- <div id="footer">
+			<p>© Since 1945 Amorepacific, All Rights Reserved.</p>
+			<h1><img src="common/img/f_logo.png" alt="로고"></h1>
+		</div> -->
+		<!-- /#footer -->
+	</div>
+	<!-- /#wrapper -->
+
+	<script>
+	$(document).ready(function(){
+		var contH = $(".login_wrap").height();
+		$(".login_wrap").css({"marginTop":-contH/2});
+
+		/* 아이디,비밀번호 미입력시 */
+		if($("input").length == 0){
+			$(this).next("p").show();
+		}
+
+		$('input[type=text],input[type=password]').blur(function(){
+		   if ( $(this).val() == "" ){
+				$(this).next("p").show();
+				$(this).addClass("on");
+		   } else {
+				$(this).next("p").hide();
+				$(this).removeClass("on");
+		   }
+		});
+	});
+
+	function certified(t){
+		t.hide();
+		t.next().show();
+		$('#certifyBtn').show(); // 20180202 추가
+	}
+	</script>
+</body>
+</html>

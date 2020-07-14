@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="AP Tong" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>AP Tong</title>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/sub.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/screen.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="../common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../common/js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="../common/js/slick.js"></script>
+<script type="text/javascript" src="../common/js/common.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="inquiryboard_wrap">
+		<div class="inner">
+			<div class="left_area">
+				<div class="header">
+					<h1><a href="../index.html">AP CI</a></h1>
+					<div class="user_info">
+						<p><em>exnickname</em> 님 <a href="#">logout</a></p>
+						<ul class="link">
+							<li><a href="../note/received_note_list.html">쪽지관리</a></li>
+							<li><a href="../mypage/my_list.html">마이페이지</a></li>
+						</ul>
+					</div>
+					<h2 class="scr_out">주메뉴</h2>
+					<ul class="lnb">
+						<li><a href="../index.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>HOME</a></li>
+						<li><a href="freeboard_list.html"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>자유 게시판</a></li>
+						<li class="on"><a href="inquiryboard_list.html"><i class="fa fa-comments fa-lg" aria-hidden="true"></i>문의 게시판</a></li>
+					</ul>
+				</div>
+
+				<div class="footer">
+					<h2 class="scr_out">사이트 정보</h2>
+					<ul class="link">
+						<li><a href="../info/guide.html">이용안내</a></li>
+						<li><a href="../info/privacy_statement.html">개인정보처리방침</a></li>
+						<li><a href="../info/terms_of_use.html">이용약관</a></li>
+					</ul>
+					
+					<p class="f_logo">AP CI</p>
+					<p class="copyright">© AP Tong, All Rights Reserved.</p>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<form name="" id="" action="" method="post">
+				<div id="container" class="ap_board_write">
+					<div class="title">
+						<h1>문의 게시판</h1>
+						<p>회사의 답변이 필요한 문의 내용을 작성해주세요.</p>
+						<button type="button" class="btn_guide" onclick="javascript:guidePop();"><i class="fa fa-question-circle fa-2x" aria-hidden="true"></i></button>
+					</div>
+					
+					<div class="form_tbl">
+						<table>
+							<caption>글쓰기 폼</caption> 
+							<tbody>
+								<tr>
+									<th scope="row">카테고리</th>
+									<td>
+										<div class="select_wrap" id="">
+											<input type="text" class="select ellipsis" placeholder="카테고리" readonly=""> <!-- 20180220 업데이트 : input에 클래스명 'ellipsis' 추가 -->
+											<div class="option">
+												<ul>
+													<li>인사</li>
+													<li>복지</li>
+													<li>시스템</li>
+													<li>정책 / 제도</li>
+													<li>고객 / 마케팅</li>
+													<li>제품 / 서비스</li>
+													<li>기타</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">답변조직 지정</th>
+									<td>
+										<div class="select_wrap" id="">
+											<input type="text" class="select ellipsis" placeholder="답변부서" readonly=""> <!-- 20180220 업데이트 : input에 클래스명 'ellipsis' 추가 -->
+											<div class="option">
+												<ul>
+													<li>전체</li>
+													<li>답변조직지정의답변부서명은최대삼십자까지들어갈수있습니다다다</li>
+												</ul>
+											</div>
+										</div>
+										<p class="btn_q"></p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">제목</th>
+									<td>
+										<input type="text" class="inputform" id="" name="" value="" placeholder="제목을 입력해주세요." maxlength="8">
+									</td>
+								</tr>				
+								<tr>
+									<th scope="row">내용</th>
+									<td>
+										<div class="editor_wrap">
+											<textarea name="" id="" cols="30" rows="15"></textarea>
+											<p class="placeholder">하나! 회사의 답변이 필요한 문의 내용을 작성해주세요. <br>
+둘! 문의글은 답변 부서가 쉽게 이해할 수 있도록 주제에 맞춰 구체적으로 작성해주세요.  <br>
+셋! 등록과 동시에 지정 하신 조직으로 메일이 발송됩니다. <em>(발송 후 취소 불가)</em> <br><br>
+☞ 글 등록 후 수정/삭제가 불가능하오니 신중히 작성 부탁드립니다.</p>
+										</div>
+									</td>
+								</tr> 				
+								<tr>
+									<th scope="row">첨부파일</th>
+									<td>
+										<div class="file_wrap">
+											<span class="file_lst">
+												<a>aaa.jpg</a>
+												<button type="button" class="btn_del" onclick="fileDel(this);">삭제</button>
+												<input type="hidden" id="" class="fileName" name="" value="aaa.jpg">
+											</span>
+											<span class="file_lst">
+												<a>filename.jpg</a>
+												<button type="button" class="btn_del" onclick="fileDel(this);">삭제</button>
+												<input type="hidden" id="" class="fileName" name="" value="aaa.jpg">
+											</span>
+										</div>
+										<div class="file_box">
+											<label for="ex_filename" class="btn_sm btn_gray btn_file"><i class="fa fa-file-image-o" aria-hidden="true"></i>파일선택</label><input type="file" id="ex_filename" class="">
+										</div>
+										<span class="file_info">※ 허용 파일 확장자 : 이미지 화일(gif, jpeg, jpg, png, bmp)<br>※ 최대 용량은 20Mbyte 까지 가능합니다.</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_wrap clear">
+						<button type="button" id="" onclick="javascript:history.back(); return false;" class="btn_m btn_gray fl_l" title="목록"><i class="fa fa-bars" aria-hidden="true"></i>목록</button>
+						<button type="submit" id="" onclick="" class="btn_m btn_color fl_r" title="등록"><i class="fa fa-check" aria-hidden="true"></i>등록</button>
+					</div>
+
+					<input type="hidden" id="hdwr" name="hdwr" value="">
+					<input type="hidden" id="tabInfo" name="tabInfo" value="">
+					<div id="fileInfo"></div>
+
+					<div id="uploadForm"></div>
+				</div>
+				<!-- /#container -->
+			</form>
+		</div>
+
+		<div class="m_footer only_mob">
+			<h2 class="scr_out">모바일 사이트 정보</h2>
+			<ul class="link">
+				<li><a href="../info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="../info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+			
+			<!-- 20180202 수정 : 하단 고정퀵메뉴 변경 -->
+			<ul class="m_quick_nav">
+				<li><a href="../info/guide.html"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>FAQ</a></li>
+				<li><a href="../member/member_edit.html"><i class="fa fa-user-circle-o fa-2x"></i>마이페이지</a></li>
+				<li><a href="#"><i class="fa fa-envelope-o fa-2x"></i>쪽지</a></li>
+			</ul>
+			<!-- //20180202 수정 : 하단 고정퀵메뉴 변경 -->
+		</div>
+		
+		<!-- 20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+		<div id="footer" class="only_pc">
+			<ul class="f_link">
+				<li><a href="../info/guide.html">이용안내</a></li>
+				<li><a href="../info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="../info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+		</div>
+		<!-- /#footer -->
+		<!-- /20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+	</div>
+	<!-- /#wrapper -->
+	
+	<div class="layer_pop guide_pop">
+        <div class="pop_bg"></div>
+        <div class="layer pop_layout">
+            <div class="pop_inner">
+                <div class="tit_box">
+                    <h3 class="tit">문의 게시판 이용안내</h3>
+                    <p class="pop_close">닫기</p>
+                </div>
+                <div class="cont_box">
+					<p>문의 게시판 이용안내</p>
+                </div>
+            </div>
+            <!-- /.pop_inner -->  
+        </div>
+        <!-- /.layer --> 
+    </div>
+    <!-- /.layer_popup -->
+
+	<script>
+		// 이용안내 팝업
+		function guidePop(){
+			$('.guide_pop').fadeIn(200);
+			$(".pop_bg").show();
+			$("html").css("overflow","hidden");
+			
+			$('.pop_close, .pop_bg').click(function(){
+				$('.guide_pop').hide();
+				$(".pop_bg").hide();
+				$("html").css("overflow","auto");
+			});
+
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var layerWidth = $('.layer').width();
+			var layerHeight = $('.layer').height();
+			
+			var popH = $('.pop_layout').height();
+			
+			if( popH > winHeight ) { //화면 세로사이즈가 레이어팝업 세로사이즈보다 클때
+				$('.layer_pop').addClass('s_pc');
+			}else{ //그 외의 경우
+				$('.layer_pop').removeClass('s_pc');
+			}	
+		}
+
+		function fileDel(delfile){
+			$(delfile).parent().remove();
+		}
+
+		// 20180220 업데이트 : 스크립트 추가(placeholder 기능관련)
+		$(document).ready(function(){
+			// textarea placeholder 기능
+			$('.placeholder').on("click focusin", function(){
+				$(this).hide();
+				$(this).prev('textarea').focus();
+			});
+			$('.editor_wrap textarea').on("click focusin", function(){
+				$(this).next().hide();
+				$(this).focus();
+			})
+			if($("textarea").length == 0){
+				$(this).next(".placeholder").show();
+			}
+
+			$('textarea').blur(function(){
+				if ( $(this).val() == "" ){
+					$(this).next(".placeholder").show();
+				}else{
+					$(this).next(".placeholder").hide();
+				}
+			});
+
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="AP Tong" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<title>AP Tong</title>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/sub.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/screen.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="../common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../common/js/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="../common/js/slick.js"></script>
+<script type="text/javascript" src="../common/js/common.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="freeboard_wrap">
+		<div class="inner">
+			<div class="left_area">
+				<div class="header">
+					<!-- 20180226 업데이트 : <span>사우들과 자유롭게 소통하는 공간</span> 추가 -->
+					<h1><a href="../index.html">AP Tong</a><span>사우들과 자유롭게 소통하는 공간</span></h1>
+					<!-- /20180226 업데이트 : <span>사우들과 자유롭게 소통하는 공간</span> 추가 -->
+					<div class="user_info">
+						<p><em>exnickname</em> 님 <a href="#">logout</a></p>
+						<ul class="link">
+							<li><a href="../note/received_note_list.html">쪽지관리</a></li>
+							<li><a href="../mypage/my_list.html">마이페이지</a></li>
+						</ul>
+					</div>
+					<h2 class="scr_out">주메뉴</h2>
+					<ul class="lnb">
+						<li><a href="../index.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>HOME</a></li>
+						<li class="on"><a href="../freeboard_list.html"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>자유 게시판</a></li>
+						<li><a href="../inquiryboard_list.html"><i class="fa fa-comments fa-lg" aria-hidden="true"></i>문의 게시판</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //좌측 메뉴 -->
+
+			<form name="" id="" action="" method="post">
+				<div id="container" class="ap_board_write">
+					<div class="title">
+						<h1>자유 게시판</h1>
+						<p>사우들과 자유롭게 소통하는 공간</p>
+					</div>
+
+					<div class="form_tbl">
+						<table>
+							<caption>글쓰기 폼</caption> 
+							<tbody>
+								<tr>
+									<th scope="row">카테고리</th>
+									<td>
+										<div class="select_wrap" id="select1">
+											<input type="text" class="select ellipsis" placeholder="카테고리" readonly=""> <!-- 20180220 업데이트 : input에 클래스명 'ellipsis' 추가 -->
+											<div class="option">
+												<ul>
+													<li>선택 안함</li>
+													<li>회사 생활 / 커리어</li>
+													<li>여가 / 연애</li>
+													<li>결혼 / 육아</li>
+													<li>시사 / 재테크</li>
+													<li>기타</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">제목</th>
+									<td>
+										<input type="text" class="inputform" id="" name="" value="" placeholder="제목을 입력해주세요." maxlength="8">
+									</td>
+								</tr>				
+								<tr>
+									<th scope="row">내용</th>
+									<td>
+										<div class="editor_wrap">
+											<!-- 180312 업데이트 : textarea 태그내에 placeholder 사용(placeholder 내용추가 및 엔터로 띄어쓰기 적용)으로 인한 기존 <p class="placeholder">~~</p> 마크업 주석처리 -->
+											<!-- 부득이 하게 textarea 태그내에 placeholder 를 사용 할 수 없는 경우, 아래 <p class="placeholder">~~</p> 사용해주세요 -->
+											<textarea name="" id="" cols="30" rows="15" placeholder="하나! 사우들과 자유롭게 소통하는 공간
+둘! 욕설, 특정 대상에 대한 근거 없는 비하, 실명 비방 등 명예훼손의 소지가 있는 내용을 게시할 경우 관련 제재를 받을 수 있습니다.
+셋! 사이트 취지에 맞지 않는 글, 도배글, 불쾌감을 주는 글을 지속 게시할 경우 사전 주의와 함께 해당 글은 임의 숨김 처리 될 수 있습니다.
+
+☞ 글 등록 후 수정/삭제가 가능하며, 사우들로부터 다수 신고가 누적된 경우 자동으로 숨김 처리됩니다.
+철저한 익명 보장하에 AP만의 성숙한 소통 문화를 만들어가자는 취지이니 양해 부탁드립니다."></textarea>
+
+											<!-- <p class="placeholder">하나! 사우들과 자유롭게 소통하는 공간<br>
+											둘! 욕설, 특정 대상에 대한 근거 없는 비하, 실명 비방 등 명예훼손의 소지가 있는 내용을 게시할 경우 관련 제재를 받을 수 있습니다.<br>
+											셋! 사이트 취지에 맞지 않는 글, 도배글, 불쾌감을 주는 글을 지속 게시할 경우 사전 주의와 함께 해당 글은 임의 숨김 처리 될 수 있습니다.<br><br>
+											
+											☞ 글 등록 후 수정/삭제가 가능하며, 사우들로부터 다수 신고가 누적된 경우 자동으로 숨김 처리됩니다.<br>철저한 익명 보장하에 AP만의 성숙한 소통 문화를 만들어가자는 취지이니 양해 부탁드립니다. </p> -->
+										</div>						
+									</td>
+								</tr> 				
+								<tr>
+									<th scope="row">첨부파일</th>
+									<td>
+										<div class="file_wrap">
+											<span class="file_lst">
+												<a>aaa.jpg</a>
+												<button type="button" class="btn_del" onclick="fileDel(this);">삭제</button>
+												<input type="hidden" id="" class="fileName" name="" value="aaa.jpg">
+											</span>
+											<span class="file_lst">
+												<a>filename.jpg</a>
+												<button type="button" class="btn_del" onclick="fileDel(this);">삭제</button>
+												<input type="hidden" id="" class="fileName" name="" value="aaa.jpg">
+											</span>
+										</div>
+										<div class="file_box">
+											<label for="ex_filename" class="btn_sm btn_gray btn_file"><i class="fa fa-file-image-o" aria-hidden="true"></i>파일선택</label><input type="file" id="ex_filename" class="">
+										</div>
+										<!-- 180316 업데이트 : 모바일뷰에서 확장자 줄바꿈처리 -->
+										<span class="file_info">※ 허용 파일 확장자 : 이미지 화일<span class="mob_br">(gif, jpeg, jpg, png, bmp)</span><br>※ 최대 용량은 20Mbyte 까지 가능합니다.</span>
+										<!-- 180316 업데이트 : 모바일뷰에서 확장자 줄바꿈처리 -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_wrap clear">
+						<button type="button" id="" onclick="javascript:history.back(); return false;" class="btn_m btn_gray fl_l" title="목록"><i class="fa fa-bars" aria-hidden="true"></i>목록</button>
+						<a href="freeboard_edit.html" class="btn_m btn_color fl_r" title="수정"><i class="fa fa-check" aria-hidden="true"></i>수정</a>
+					</div>
+
+					<input type="hidden" id="hdwr" name="hdwr" value="">
+					<input type="hidden" id="tabInfo" name="tabInfo" value="">
+					<div id="fileInfo"></div>
+
+					<div id="uploadForm"></div>
+
+				</div>
+				<!-- /#container -->
+			</form>
+		</div>
+		<div class="m_footer only_mob">
+			<h2 class="scr_out">모바일 사이트 정보</h2>
+			<ul class="link">
+				<li><a href="../info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="../info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+			
+			<!-- 20180202 수정 : 하단 고정퀵메뉴 변경 -->
+			<ul class="m_quick_nav">
+				<li><a href="../info/guide.html"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>FAQ</a></li>
+				<li><a href="../member/member_edit.html"><i class="fa fa-user-circle-o fa-2x"></i>마이페이지</a></li>
+				<li><a href="#"><i class="fa fa-envelope-o fa-2x"></i>쪽지</a></li>
+			</ul>
+			<!-- //20180202 수정 : 하단 고정퀵메뉴 변경 -->
+		</div>
+		
+		<!-- 20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+		<div id="footer" class="only_pc">
+			<ul class="f_link">
+				<li><a href="../info/guide.html">이용안내</a></li>
+				<li><a href="../info/privacy_statement.html">개인정보처리방침</a></li>
+				<li><a href="../info/terms_of_use.html">이용약관</a></li>
+			</ul>
+			<p class="copyright">© AP Tong, All Rights Reserved.</p>
+		</div>
+		<!-- /#footer -->
+		<!-- /20180226 업데이트 : 레이아웃 변경으로 인한 푸터추가 -->
+	</div>
+	<!-- /#wrapper -->
+
+<script>
+function fileDel(delfile){
+	$(delfile).parent().remove();
+}
+</script>
+
+</body>
+</html>

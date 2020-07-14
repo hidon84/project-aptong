@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="AP Tong" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+
+<title>AP Tong</title>
+<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="common/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="common/css/main.css" />
+<link rel="stylesheet" type="text/css" href="common/css/sub.css" />
+<link rel="stylesheet" type="text/css" href="common/css/screen.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="common/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="common/js/jquery.dotdotdot.js"></script>`
+<script type="text/javascript" src="common/js/slick.js"></script>
+<script type="text/javascript" src="common/js/common.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="form_st">
+		<div class="login_wrap join_wrap"> <!-- 180316 업데이트 : join_wrap 클래스 추가 -->
+			<div class="logo_txt">
+				<h1><img src="common/img/logo.png" alt="AP통"></h1>
+				<p>아모레퍼시픽그룹 임직원의 ‘열린 소통‘ 공간입니다.<br>로그인 하시면 더 많은 서비스를 편리하게 이용하실 수 있습니다.<br>(활동하실때에는 닉네임으로  진행됩니다.)</p>
+			</div>
+			<fieldset>
+				<legend class="scr_out">회원가입</legend>
+				<form class="loginform" id="" action="" name="" method="POST">
+					<div class="input_wrap">
+						<div class="inp_group">
+							<div class="inp">
+								<label for="" class="scr_out">아이디</label>
+								<input type="text" id="userName" name="" placeholder="5~20자의 영어 소문자, 숫자, 특수기호(자판 기준)만 사용 가능" class="inputform">
+								<p class="warning_label"><label for="">아이디를 입력해주세요.</label></p>
+							</div>
+							<div class="inp">
+								<label for="" class="scr_out">비밀번호</label>
+								<input type="password" id="userPw" name="" placeholder="6~16자의 영어 대/소문자, 숫자, 특수기호(자판 기준)만 사용 가능" class="inputform">
+								<p class="warning_label"><label for="">비밀번호를 입력해주세요.</label></p>
+							</div>
+							<div class="inp">
+								<label for="" class="scr_out">비밀번호 확인</label>
+								<input type="password" id="userPwChk" name="" placeholder="비밀번호 확인" class="inputform">
+								<p class="warning_label"><label for="">비밀번호를 한번 더 입력해주세요.</label></p>
+							</div>
+							<ul class="cmt_lst">
+								<li>※ 아이디/비밀번호 분실시 재가입해야 하므로, 기억하기 쉬운 문자 및 숫자로 설정 부탁드립니다.</li>
+							</ul>
+							<div class="inp">
+								<label for="" class="scr_out">닉네임</label>
+								<input type="text" id="userNickname" name="" placeholder="2~10자 영문 대/소문자, 한글, 숫자, 자판기준 특수문자 가능" class="inputform">
+								<p class="warning_label"><label for="">닉네임을 입력해주세요.</label></p>
+							</div>
+							<ul class="cmt_lst">
+								<li>※ 닉네임은 월 4회 변경 가능합니다.</li>
+							</ul>
+						</div>
+						<div class="btn_wrap">
+							<button type="submit" id="" class="btn btn_main">회원가입</button>
+						</div>
+					</div>
+					<!-- /.input_wrap -->
+				</form>
+			</fieldset>
+		</div>
+		
+		<!-- <div id="footer">
+			<p>© Since 1945 Amorepacific, All Rights Reserved.</p>
+			<h1><img src="common/img/f_logo.png" alt="로고"></h1>
+		</div> -->
+		<!-- /#footer -->
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- 180316 업데이트 : 하단스크립트 수정 -->
+	<script>
+	$(document).ready(function(){
+		var contH = $(".login_wrap").height();
+		$(".login_wrap").css({"marginTop":-contH/2});
+
+		/* 아이디,비밀번호 미입력시 */
+		if($("input").length == 0){
+			$(this).next("p").show();
+		}
+
+		$('input').blur(function(){
+		   if ( $(this).val() == "" ){
+				$(this).next("p").addClass('on').show();
+				$(this).addClass("on");
+		   } else {
+				$(this).next("p").hide();
+				$(this).removeClass("on");
+		   }
+		});
+		$('#userName').blur(function(){
+		   if ( $(this).val() == "" ){
+				$(this).next("p").html('5~20자의 영어 소문자, 숫자, 특수기호(자판 기준)만 사용 가능');
+		   }
+		});
+		$('#userPw').blur(function(){
+		   if ( $(this).val() == "" ){
+				$(this).next("p").html('6~16자의 영어 대/소문자, 숫자, 특수기호(자판 기준)만 사용 가능');
+		   }
+		});
+		$('#userPwChk').blur(function(){
+		   if ( $(this).val() == "" ){
+				$(this).next("p").html('6~16자의 영어 대/소문자, 숫자, 특수기호(자판 기준)만 사용 가능');
+		   }
+		});
+		$('#userNickname').blur(function(){
+		   if ( $(this).val() == "" ){
+				$(this).next("p").html('2~10자 영문 대/소문자, 한글, 숫자, 자판기준 특수문자 가능');
+		   }
+		});
+	});
+	</script>
+	<!-- //180316 업데이트 : 하단스크립트 수정 -->
+</body>
+</html>
